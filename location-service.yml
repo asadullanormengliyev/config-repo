@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: location-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/location-service
+
+server:
+  port: 8081
