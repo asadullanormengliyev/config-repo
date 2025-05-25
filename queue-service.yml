@@ -5,8 +5,8 @@ spring:
     import: optional:configserver:http://localhost:8888
   datasource:
     url: jdbc:postgresql://localhost:5432/queuedb
-    username: postgres
-    password: 5555
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
