@@ -5,8 +5,8 @@ spring:
     import: optional:configserver:http://localhost:8888
   datasource:
     url: jdbc:postgresql://localhost:5432/my_db
-    username: postgres
-    password: 5555
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -15,11 +15,11 @@ spring:
 jwt:
   access:
     token:
-      secretKey: "FFFFGGGGSSSEEEOOOPAASS888A99999ASSAASA09900AS889"
+      secretKey: ${JWT_ACCESS_SECRET}
       expire:
         date: 900000000
   refresh:
     token:
-      secretKey: "FFFFGGGGSSSEEEOOOPAYYASSH8A99999ASSAASJKJKHHG9"
+      secretKey:  ${JWT_REFRESH_SECRET}
       expire:
         date: 86400000
